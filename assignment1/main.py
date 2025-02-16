@@ -86,7 +86,7 @@ def ex3():
 
     companies = range(1, 70)
     contracts = []
-    with open("hw1-03.txt", "r") as f:
+    with open("assignment1/hw1-03.txt", "r") as f:
         for line in f:
             if l := line.strip():
                 i, j = map(int, l.split())
