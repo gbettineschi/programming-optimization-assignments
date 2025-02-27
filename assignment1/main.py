@@ -65,7 +65,7 @@ def ex2():
     # constrain probabilites to sum to 1
     problem += pl.lpSum(strategy.values()) == 1
 
-    # constrain obj to be the minimum payoff of strategy, i.e. the payoff assuming a rational competitor
+    # constrain 'obj' to be the minimum payoff given by 'strategy'
     for j in choices:
         problem += obj <= pl.lpSum(strategy[i] * payoff(i, j) for i in choices)
 
@@ -86,10 +86,10 @@ def ex3():
 
     companies = range(1, 70)
     contracts = []
-    with open("assignment1/hw1-03.txt", "r") as f:
+    with open("hw1-03.txt", "r") as f:
         for line in f:
-            if l := line.strip():
-                i, j = map(int, l.split())
+            if line := line.strip():
+                i, j = map(int, line.split())
                 contracts.append((i, j))
 
     # initialize LP relaxation of the integer problem assuming an integral solution
