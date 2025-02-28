@@ -10,7 +10,6 @@ pulp = "^3.0.2"
 networkx = "^3.4.2"
 
 [tool.poetry.group.dev.dependencies]
-black = "^25.1.0"
 ruff = "^0.9.8"
 
 [tool.black]
@@ -21,6 +20,3 @@ target-version = ['py311']
 line-length = 88
 target-version = "py311"
 fix = true
-
-[tool.ruff.lint]
-extend-ignore = ["E203"]  # Matches flake8 ignore settings
