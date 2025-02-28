@@ -1,20 +1,22 @@
-[tool.poetry]
+[project]
 name = "programming-optimization-assignments"
-authors = ["Gabriele Bettineschi <gbettineschi29@gmail.com>"]
-package-mode = false
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "networkx>=3.4.2",
+    "numpy>=2.2.3",
+    "pulp>=3.0.2",
+]
 
-[tool.poetry.dependencies]
-python = "^3.13"
-numpy = "^2.2.3"
-pulp = "^3.0.2"
-networkx = "^3.4.2"
+[dependency-groups]
+dev = [
+    "ruff>=0.9.9",
+]
 
-[tool.poetry.group.dev.dependencies]
-ruff = "^0.9.8"
-
-[tool.black]
-line-length = 88
-target-version = ['py311']
+[tool.uv]
+package = false
 
 [tool.ruff]
 line-length = 88
